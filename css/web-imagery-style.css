@@ -32,3 +32,8 @@ figure figcaption {
     padding: 12px;
     background-color: rgba(179, 179, 179, 0.6)
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
