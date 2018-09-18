@@ -57,3 +57,13 @@ section {
 .post-preview img {
     width: 100px;
 }
+
+.post-link {
+    text-decoration: none;
+    color: var(--primary-font-color);
+}
+
+.post-link:hover {
+    text-decoration: unset;
+    color: var(--primary-color);
+}
