@@ -1,8 +1,9 @@
 :root {
     --secondary-bg-color: #424242;
     --primary-bg-color: #fafafa;
-    --primary-color: #1976d2;
+    --primary-color: #1565c0;
     --primary-font-color: #424242;
+    --secondary-font-color: #fafafa;
 }
 
 body {
@@ -20,20 +21,25 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 8px;
+    padding: 8px 15px 8px 15px;
     background-color: var(--secondary-bg-color);
     z-index: 1000;
-}
-
-#header-nav a {
-    color: var(--primary-color);
 }
 
 #sub-nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100px;
+    width: 150px;
+}
+
+#header-nav a {
+    color: var(--secondary-font-color);
+    text-decoration: none;
+}
+
+#header-nav a:hover {
+    color: var(--primary-color);
 }
 
 #title-name {
