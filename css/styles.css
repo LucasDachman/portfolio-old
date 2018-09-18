@@ -52,10 +52,15 @@ section {
 .post-preview {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .post-preview img {
     width: 100px;
+}
+
+.post-preview figure {
+    padding: 30px 0 0 0;
 }
 
 .post-link {
