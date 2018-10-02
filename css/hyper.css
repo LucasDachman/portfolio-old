@@ -27,6 +27,10 @@ body {
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-size: 72px;
+    letter-spacing: 14px;
+    -webkit-text-stroke: 3px black;
+    color: var(--secondary-font-color);
+    text-shadow: 2px 4px;
     text-align: center;
 }
 
