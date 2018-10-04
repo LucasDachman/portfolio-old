@@ -16,6 +16,14 @@ body {
     height: 100%;
 }
 
+nav {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    color: var(--primary-font-color);
+}
+
 .container {
     text-align: center;
     margin: auto;
