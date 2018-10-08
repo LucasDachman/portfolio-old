@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:400,800');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,900|Open+Sans:400,800|Roboto+Mono:400,700');
 
 :root {
     --secondary-bg-color: #424242;
@@ -49,6 +49,11 @@ section {
     margin: auto;
 }
 
+a {
+    font-family: 'Roboto Mono';
+    font-weight: 400;
+}
+
 /* unvisited link */
 a:link {
     color: green;
@@ -62,7 +67,7 @@ a:visited {
 /* mouse over link */
 a:hover {
     color: hotpink;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 /* selected link */
