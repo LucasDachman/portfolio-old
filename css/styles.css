@@ -1,3 +1,6 @@
+/* add normalize.css as css reset */
+@import url("normalize.css");
+
 :root {
     --secondary-bg-color: #424242;
     --primary-bg-color: #fafafa;
@@ -49,7 +52,7 @@ section {
 #title-name {
     font-size: 45px;
     padding: 0;
-    transform: translate(20px, 40px);
+    transform: translate(20px, 20px);
 }
 
 .display-header {
