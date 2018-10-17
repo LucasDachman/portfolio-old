@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:800|Roboto:700|Space+Mono:700');
+
+/** START RESET **/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/** END RESET **/
+
+:root {
+	--red: #DC3522;
+	--tan: #D9CB9E;
+	--light-gray: #374140;
+	--gray: #2A2C2B;
+	--black: #1E1E20;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', serif;
+	color: var(--black);
+	background-color: var(--tan);
+	font-size: 12;
+}
+
+p {
+	font-size: 14pt;
+	line-height: 1.5em;
+}
+
+h1 {
+	color: var(--red);
+	font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+	font-weight: 800;
+	font-size: 54pt;
+}
+h2 {
+	font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: var(--light-gray);
+}
+h3 {
+	font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 20px 0px;
+	color: var(--gray);
+}
+
+a:link {
+	font-family: 'Roboto', monospace;
+	font-weight: 700;
+	color: var(--light-gray);
+	text-decoration: none;
+}
+
+a:visited {
+	text-decoration-style: none;
+}
+
+a:hover, a:focus, a:active {
+	color: var(--red);
+	text-decoration: underline;
+	text-decoration-color: var(--red);
+}
+
+abbr {}
+
+/* specific divs */
+
+.page-wrapper {
+    margin: auto;
+    width: 50%;
+}
+
+.intro {}
+
+header h1 {
+}
+
+header h2 {}
+
+header h3 {}
+
+header {
+	padding: 40px 0px;
+}
+
+.summary {}
+
+.summary p {}
+
+.preamble {}
+
+.supporting {}
+
+footer {}
+
+footer a:link, footer a:visited {}
+
+.sidebar {}
+
+.sidebar .wrapper {}
+
+.sidebar h3.select {}
+
+.sidebar h3.archives {}
+
+.sidebar h3.resources {}
+
+.sidebar ul {}
+
+.sidebar li {}
+
+.sidebar li a:link {}
+
+.sidebar li a:visited {}
+
+.extra1 {}
