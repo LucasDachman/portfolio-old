@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:800|Roboto:700|Space+Mono:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:800|Roboto:700');
 
 /** START RESET **/
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -67,14 +67,17 @@ html {
 
 body {
 	font-family: 'Open Sans', serif;
-	color: var(--black);
+	color: var(--grey);
 	background-color: var(--tan);
 	font-size: 12;
 }
 
 p {
+	color: var(--gray);
 	font-size: 14pt;
 	line-height: 1.5em;
+	text-align: justify;
+	margin: 10px 0px;
 }
 
 h1 {
@@ -82,6 +85,7 @@ h1 {
 	font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
 	font-weight: 800;
 	font-size: 54pt;
+	width: 10%;
 }
 h2 {
 	font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
@@ -91,10 +95,14 @@ h2 {
 }
 h3 {
 	font-family: 'Quicksand', Georgia, 'Times New Roman', Times, serif;
-	font-size: 1.5em;
+	font-size: 1.8em;
 	font-weight: bold;
 	margin: 20px 0px;
 	color: var(--gray);
+	text-align: left;
+
+	margin: none;
+	width: 100%;
 }
 
 a:link {
@@ -105,7 +113,8 @@ a:link {
 }
 
 a:visited {
-	text-decoration-style: none;
+	text-decoration: none;
+	color: var(--light-gray);
 }
 
 a:hover, a:focus, a:active {
@@ -120,7 +129,41 @@ abbr {}
 
 .page-wrapper {
     margin: auto;
-    width: 50%;
+	width: 83%;
+	
+	display: flex;
+	flex-direction: row;
+
+}
+
+.sidebar, .main, .intro {
+	padding: 0px 20px;
+}
+
+.main {
+	margin-top: 350px;
+}
+
+.sidebar {
+	text-align: end;
+	margin-top: 350px;
+}
+
+.sidebar h3 {
+	color: var(--red);
+	text-align: end;
+}
+
+.sidebar li {
+	margin: 20px 0px;
+}
+
+.design-name {
+	font-size: 1.2em;
+	display: block;
+}
+
+.designer-name {
 }
 
 .intro {}
@@ -128,7 +171,8 @@ abbr {}
 header h1 {
 }
 
-header h2 {}
+header h2 {
+}
 
 header h3 {}
 
@@ -144,9 +188,17 @@ header {
 
 .supporting {}
 
-footer {}
+footer {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+footer a:link {
+	margin: 10px 0px;
+}
 
-footer a:link, footer a:visited {}
+footer a:link, footer a:visited {
+}
 
 .sidebar {}
 
