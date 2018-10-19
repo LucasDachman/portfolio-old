@@ -52,7 +52,7 @@ section {
 }
 
 #header-nav a:hover {
-    color: var(--primary-color);
+    color: var(--primary-font-color);
     background-color: var(--primary-bg-color);
 }
 
