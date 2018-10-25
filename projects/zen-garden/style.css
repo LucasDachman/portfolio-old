@@ -105,17 +105,12 @@ h3 {
 	width: 100%;
 }
 
-a:link {
+a:link, a:visited {
 	font-family: 'Roboto', monospace;
 	font-weight: 700;
 	color: var(--light-gray);
 	text-decoration: none;
     transition: color 0.5s ease, text-decoration 0.5s ease;
-}
-
-a:visited {
-	text-decoration: none;
-	color: var(--light-gray);
 }
 
 a:hover, a:focus, a:active {
@@ -134,7 +129,6 @@ abbr {}
 	
 	display: flex;
 	flex-direction: row;
-
 }
 
 .sidebar, .main, .intro {
@@ -156,15 +150,23 @@ abbr {}
 }
 
 .sidebar li {
-	margin: 20px 0px;
+	padding: 15px 0px;
+	font-size: 12px;
+	border-bottom: 1px solid var(--light-gray);
 }
 
 .design-name {
-	font-size: 1.2em;
+	font-size: 18px;
 	display: block;
+	margin-bottom: 5px;
 }
 
 .designer-name {
+	font-size: 14px;
+}
+
+.design-archives li, .zen-resources li {
+	font-size: 14px;
 }
 
 .intro {}
@@ -190,8 +192,6 @@ header {
 .supporting {}
 
 footer {
-	display: flex;
-	flex-direction: column;
 	text-align: center;
 }
 footer a:link {
@@ -201,7 +201,7 @@ footer a:link {
 footer a:link, footer a:visited {
 }
 
-.sidebar {}
+
 
 .sidebar .wrapper {}
 
@@ -213,10 +213,35 @@ footer a:link, footer a:visited {
 
 .sidebar ul {}
 
-.sidebar li {}
-
 .sidebar li a:link {}
 
 .sidebar li a:visited {}
 
 .extra1 {}
+
+@media screen and (max-width: 1023px) {
+	p {
+		text-align: left;
+	}
+
+	.page-wrapper {
+		margin: auto;
+		width: 95%;
+		
+		display: flex;
+		flex-direction: column;
+	}
+
+	.sidebar {
+		text-align: left;
+		margin-top: 0px;
+	}
+
+	.sidebar h3 {
+		color: var(--red);
+		text-align: left;
+	}
+	.main {
+		margin-top: 0px;
+	}
+}
