@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:800|Roboto:700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:800|Roboto:400,700');
 
 /** START RESET **/
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -110,6 +110,7 @@ a:link {
 	font-weight: 700;
 	color: var(--light-gray);
 	text-decoration: none;
+    transition: color 0.5s ease, text-decoration 0.5s ease;
 }
 
 a:visited {
