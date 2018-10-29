@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Quicksand:800|Roboto:400,700');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:800|Roboto:400,700|Lato');
 
 /** START RESET **/
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -66,7 +66,7 @@ html {
 }
 
 body {
-	font-family: 'Open Sans', serif;
+	font-family: 'Lato', sans-serif;
 	color: var(--grey);
 	background-color: var(--tan);
 	font-size: 12;
@@ -169,33 +169,63 @@ abbr {}
 	font-size: 14px;
 }
 
-.intro {}
-
-header h1 {
+.zen-validate-html {
+    background: url(../../img/zen-garden/html-link.png) no-repeat;
+}
+.zen-validate-html:hover {
+    background: url(../../img/zen-garden/html-hover.png) no-repeat;
 }
 
-header h2 {
+.zen-validate-css {
+    background: url(../../img/zen-garden/css-link.png) no-repeat;
+}
+.zen-validate-css:hover {
+    background: url(../../img/zen-garden/css-hover.png) no-repeat;
 }
 
-header h3 {}
+.zen-license {
+    background: url(../../img/zen-garden/cc-link.png) no-repeat;
+}
+.zen-license:hover {
+    background: url(../../img/zen-garden/cc-hover.png) no-repeat;
+}
+
+.zen-accessibility {
+    background: url(../../img/zen-garden/a11y-link.png) no-repeat;
+}
+.zen-accessibility:hover {
+    background: url(../../img/zen-garden/a11y-hover.png) no-repeat;
+}
+
+.zen-github {
+    background: url(../../img/zen-garden/github-link.png) no-repeat;
+}
+.zen-github:hover {
+    background: url(../../img/zen-garden/github-hover.png) no-repeat;
+}
+
+.zen-validate-html, .zen-validate-css, .zen-license, 
+.zen-accessibility, .zen-github, .zen-validate-html:hover, 
+.zen-validate-css:hover, .zen-license:hover, 
+.zen-accessibility:hover, .zen-github:hover {
+	width: 100px;
+	height: 100px;
+	background-size: 100px 100px;
+	display: block;
+	font-size: 0;
+}
 
 header {
 	padding: 40px 0px;
 }
 
-.summary {}
-
-.summary p {}
-
-.preamble {}
-
-.supporting {}
-
 footer {
-	text-align: center;
+	display: flex;
+	flex-direction: row;
+/*	align-items: stretch;*/
+	justify-content: space-between;
 }
 footer a:link {
-	margin: 10px 0px;
 }
 
 footer a:link, footer a:visited {
