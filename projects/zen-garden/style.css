@@ -169,43 +169,53 @@ abbr {}
 	font-size: 14px;
 }
 
-.zen-validate-html {
+.zen-validate-html:link, .zen-validate-html:visited {
     background: url(../../img/zen-garden/html-link.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
-.zen-validate-html:hover {
+.zen-validate-html:hover, .zen-validate-html:focus, .zen-validate-html:active {
     background: url(../../img/zen-garden/html-hover.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
 
-.zen-validate-css {
+.zen-validate-css:link, .zen-validate-css:visited {
     background: url(../../img/zen-garden/css-link.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
-.zen-validate-css:hover {
+.zen-validate-css:hover, .zen-validate-css:focus, .zen-validate-css:active {
     background: url(../../img/zen-garden/css-hover.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
 
-.zen-license {
+.zen-license:link, .zen-license:visited {
     background: url(../../img/zen-garden/cc-link.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
-.zen-license:hover {
+.zen-license:hover, .zen-license:active, .zen-license:focus {
     background: url(../../img/zen-garden/cc-hover.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
 
-.zen-accessibility {
+.zen-accessibility:link, .zen-accessibility:visited {
     background: url(../../img/zen-garden/a11y-link.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
-.zen-accessibility:hover {
+.zen-accessibility:hover, .zen-accessibility:active, .zen-accessibility:focus {
     background: url(../../img/zen-garden/a11y-hover.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
 
-.zen-github {
-    background: url(../../img/zen-garden/github-link.png) no-repeat;
+.zen-github:link, .zen-github:visited {
+	background-image: url(../../img/zen-garden/github-link.png);
+	transition: background-image 0.5s ease;
 }
-.zen-github:hover {
+.zen-github:hover, .zen-github:active, .zen-github:focus {
     background: url(../../img/zen-garden/github-hover.png) no-repeat;
+	transition: background-image 0.5s ease;
 }
 
-.zen-validate-html, .zen-validate-css, .zen-license, 
-.zen-accessibility, .zen-github, .zen-validate-html:hover, 
+.zen-validate-html:link, .zen-validate-css:link, .zen-license:link, 
+.zen-accessibility:link, .zen-github:link, .zen-validate-html:hover, 
 .zen-validate-css:hover, .zen-license:hover, 
 .zen-accessibility:hover, .zen-github:hover {
 	width: 100px;
