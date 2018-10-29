@@ -129,6 +129,7 @@ abbr {}
 	
 	display: flex;
 	flex-direction: row;
+	align-items: stretch;
 }
 
 .sidebar, .main, .intro {
@@ -220,19 +221,22 @@ abbr {}
 .zen-accessibility:hover, .zen-github:hover {
 	width: 100px;
 	height: 100px;
-	background-size: 100px 100px;
+	background-size: contain;
+	background-position:50% 50%;
+	background-repeat: no-repeat;
 	display: block;
 	font-size: 0;
 }
 
 header {
 	padding: 40px 0px;
+	max-width: 370px;
 }
 
 footer {
 	display: flex;
 	flex-direction: row;
-/*	align-items: stretch;*/
+	align-items: stretch;
 	justify-content: space-between;
 }
 footer a:link {
