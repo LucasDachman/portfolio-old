@@ -52,6 +52,7 @@ table {
 
 /** END RESET **/
 
+/** pre load hover images instead of requesting on hover **/
 body:after {
 	display: none;
 	content: url(../../img/zen-garden/a11y-hover.png)
