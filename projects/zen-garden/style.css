@@ -53,7 +53,8 @@ table {
 /** END RESET **/
 
 body:after {
-	background: url(../../img/zen-garden/a11y-hover.png)
+	display: none;
+	content: url(../../img/zen-garden/a11y-hover.png)
 		url(../../img/zen-garden/cc-hover.png)
 		url(../../img/zen-garden/css-hover.png)
 		url(../../img/zen-garden/github-hover.png)
