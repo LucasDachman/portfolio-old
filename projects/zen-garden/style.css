@@ -52,6 +52,15 @@ table {
 
 /** END RESET **/
 
+body::after {
+	background: url(../../img/zen-garden/a11y-hover.png)
+		url(../../img/zen-garden/cc-hover.png)
+		url(../../img/zen-garden/css-hover.png)
+		url(../../img/zen-garden/github-hover.png)
+		url(../../img/zen-garden/html-hover.png);
+
+}
+
 :root {
 	--red: #DC3522;
 	--tan: #D9CB9E;
@@ -202,7 +211,7 @@ abbr {}
 	transition: background-image 0.5s ease;
 }
 .zen-accessibility:hover, .zen-accessibility:active, .zen-accessibility:focus {
-    background: url(../../img/zen-garden/a11y-hover-2.png) no-repeat;
+    background: url(../../img/zen-garden/a11y-hover.png) no-repeat;
 	transition: background-image 0.5s ease;
 }
 
