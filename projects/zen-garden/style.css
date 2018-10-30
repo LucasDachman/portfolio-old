@@ -202,7 +202,7 @@ abbr {}
 	transition: background-image 0.5s ease;
 }
 .zen-accessibility:hover, .zen-accessibility:active, .zen-accessibility:focus {
-    background: url(../../img/zen-garden/a11y-hover.png) no-repeat;
+    background: url(../../img/zen-garden/a11y-hover-2.png) no-repeat;
 	transition: background-image 0.5s ease;
 }
 
