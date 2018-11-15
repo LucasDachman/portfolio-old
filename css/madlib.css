@@ -1,0 +1,66 @@
+/* add normalize.css as css reset */
+
+@import url("normalize.css");
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+}
+
+.row:first-child {
+  flex-grow: 1;
+}
+
+section {
+  padding: 10px;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+li input {
+  margin: 0 10px;
+}
+
+.centerme {
+  text-align: center;
+}
+
+#lib-button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+#story {
+  width: 50%;
+}
+
+input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
+
+input[type=button] {
+  font-size: 1.3em;
+  background-color: rgba(219, 228, 225, 0.97);      
+  padding: 15px 30px;
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+ }
+
+ input[type=button]:focus {
+   box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.7)
+ }
