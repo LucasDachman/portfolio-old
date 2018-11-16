@@ -1,23 +1,40 @@
 /* add normalize.css as css reset */
-
 @import url("normalize.css");
+/*@import url('https://fonts.googleapis.com/css?family=Acme|Montserrat');*/
+@import url('https://fonts.googleapis.com/css?family=Acme|Montserrat:400,800i');
+
+
 .container {
   max-width: 1000px;
   margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12pt;
 }
 
 .row {
   display: flex;
   flex-direction: row;
   /*flex-wrap: wrap;*/
+  justify-content: space-between;
 }
 
-.row:first-child {
-  flex-grow: 1;
+.row {
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.7)
+}
+
+h1 {
+  margin: 18px;
+  font-family: 'Acme', sans-serif;
+  font-size: 48pt;
+}
+
+em {
+  font-weight: bold;
 }
 
 section {
-  padding: 10px;
+  margin: 10px;
 }
 
 li {
@@ -25,6 +42,12 @@ li {
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 li input {
@@ -37,13 +60,14 @@ li input {
 
 #lib-button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 40px auto;
   width: 40%;
 }
 
 #story {
-  width: 50%;
+  width: 85%;
+  margin: auto;
+  font-size: 22pt;
 }
 
 input:focus,

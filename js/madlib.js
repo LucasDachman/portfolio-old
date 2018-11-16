@@ -10,8 +10,13 @@ libButton.addEventListener('click', () => {
     let drink = document.getElementById('drink').value;
     let time = document.getElementById('time').value;
     let storyDiv = document.getElementById('story');
-    storyDiv.innerHTML = `Hello, my name is ${name1} and 
-    I am from ${location}. My hobbies are ${verb}
-    with my friend ${name2} and playing ${sport}. I like
-    to eat ${food} and drink ${drink} at ${time}.`
+    storyDiv.innerHTML = /*html*/`
+    <p>
+        Hello, my name is <em>${name1}</em> and 
+        I am from <em>${location}</em>. My hobbies 
+        are <em>${verb}</em> with my friend 
+        <em>${name2}</em> and playing <em>${sport}</em>. 
+        I like to eat <em>${food}</em> and drink 
+        <em>${drink}</em> at <em>${time}</em>.
+    <p>`
 });
