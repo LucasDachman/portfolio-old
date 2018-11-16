@@ -19,4 +19,5 @@ libButton.addEventListener('click', () => {
         I like to eat <em>${food}</em> and drink 
         <em>${drink}</em> at <em>${time}</em>.
     <p>`
+    storyDiv.style.opacity = 1.0;
 });

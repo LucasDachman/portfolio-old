@@ -68,6 +68,8 @@ li input {
   width: 85%;
   margin: auto;
   font-size: 22pt;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
 }
 
 input:focus,
