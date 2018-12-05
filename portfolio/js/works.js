@@ -15,12 +15,24 @@ const populateCards = () => {
     things where I used this and that to do 
     it a way that is better because its really
     cool.`, 'https://via.placeholder.com/400x400'),
+    cardTemplate('Title 2', `A project about 
+    things where I used this and that to do 
+    it a way that is better because its really
+    cool.`, 'https://via.placeholder.com/400x400'),
+    cardTemplate('Title 3', `A project about 
+    things where I used this and that to do 
+    it a way that is better because its really
+    cool.`, 'https://via.placeholder.com/400x400'),
+    cardTemplate('Title 4', `A project about 
+    things where I used this and that to do 
+    it a way that is better because its really
+    cool.`, 'https://via.placeholder.com/400x400'),
   ];
 
   const worksGrid = document.getElementById('works-grid');
   cards.forEach((cardElement) => {
     console.log(cardElement);
-    worksGrid.innerHTML = cardElement;
+    worksGrid.innerHTML += cardElement;
   });
 
 }
