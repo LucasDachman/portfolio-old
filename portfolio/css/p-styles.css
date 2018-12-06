@@ -58,6 +58,8 @@ p {
     font-size: 30px;
     text-align: center;
     color: var(--black-light);
+    /* background-color: var(--gray); */
+    transition: background-color 0.1s;
 }
 
 .sidebar .dot {
@@ -149,12 +151,13 @@ p {
 }
 
 .work-link {
-    background-color: rgba(100%, 100%, 100%, 0.95);
+    background-color: rgba(100%, 100%, 100%, 1);
     display: block;
     width: 20vw;
     padding: 20px;
     border-radius: 2px;
     margin: 60px 0px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .work-link h2 {
