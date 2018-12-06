@@ -1,5 +1,7 @@
 @import "./normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Bitter|Montserrat:900|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:900|Open+Sans:400,700');
+
+
 :root {
     --black-light: #333333;
     --gray: #cccccc;
@@ -169,7 +171,7 @@ p {
     display: block;
     width: 100%;
     text-align: center;
-    font-family: 'Bitter', 'Times New Roman', Times, serif;
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
     font-size: 18px;
     line-height: 1.2;
     margin: 8px 0px;
@@ -186,6 +188,6 @@ small {
     z-index: 1;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(100%, 100%, 100%, 0.95);
+    background-color: transparent;
     transition: background-color 0.5s ease;
 }
