@@ -1,11 +1,11 @@
 @import "./normalize.css";
-@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:900|Open+Sans:400,700');
-
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700|Montserrat:900|Open+Sans:400,700');
 
 :root {
     --black-light: #333333;
     --gray: #cccccc;
     --gray-light: #e6e6e6;
+    --blue: #153E5C
 }
 
 img {
@@ -103,7 +103,6 @@ p {
 }
 
 #works-grid {
-    display: block;
     margin: auto;
     width: 75%;
     display: flex;
@@ -130,7 +129,7 @@ p {
     z-index: -1;
 }
 
-.title-name, header {
+.title-name {
     position: fixed;
     left: 30px;
     width: 100%;
@@ -145,11 +144,11 @@ p {
     color: var(--black-light);
 }
 
-.title-lucas, h1{
+.title-lucas{
     font-size: 28vw;
 }
 
-.title-dachman, h1{
+.title-dachman{
     font-size: 17vw;
 }
 
@@ -196,4 +195,113 @@ small {
     height: 100vh;
     background-color: transparent;
     transition: background-color 0.5s ease;
+}
+
+/* resume */
+
+.resume-container {
+    position: absolute;
+    width: 80%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    font-family: 'Merriweather', serif;
+    display: grid;
+    justify-content: center;
+    align-items: start;
+    grid-template-areas: "name title"
+                        "contact education"
+                        "skills skills"
+                        "tools languages";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-gap: 20px 20px;
+}
+
+.resume-header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    color: var(--blue);
+    letter-spacing: 0.2em;
+    padding: 0 12px;
+}
+
+.resume-name {
+    grid-area: name;
+    text-align: right;
+    border-right: 3px solid var(--black-light);
+}
+
+.resume-title {
+    grid-area: title;
+    text-align: left;
+    border-left: 3px solid var(--black-light);
+}
+
+.contact {
+    grid-area: contact;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact ul {
+    line-height: 3em;
+    list-style-type: none;
+    list-style-position: outside;
+    padding-left: 0;
+}
+
+.education {
+    grid-area: education;
+    display: block;
+    margin: 0 auto;
+}
+
+.resume-container h2 {
+    /* text-align: center; */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    color: var(--blue);
+}
+
+.resume-container p {
+    font-family: 'Merriweather', serif;
+}
+
+.resume-container strong {
+    font-weight: 700;
+}
+
+.skills {
+    grid-area: skills;
+    position: block;
+    margin: 0 auto;
+}
+
+.skills h2 {
+    text-align: center;;
+}
+
+.skills ul {
+    padding: 0;
+    margin: 0;
+    line-height: 3em;
+    list-style-type: square;
+    text-align: center;
+    word-wrap: none;
+}
+
+.skills li {
+    display: inline;
+    padding-left: 2em;
+    white-space: nowrap;
+}
+
+.skills li::before {
+    content: "»";
+    display: inline-block;
+    position: relative;
+    margin: 1em 1em 0 1em;
 }
