@@ -278,30 +278,46 @@ small {
     grid-area: skills;
     position: block;
     margin: 0 auto;
-}
-
-.skills h2 {
     text-align: center;;
+    line-height: 3em;
 }
 
-.skills ul {
+.resume-container ul {
     padding: 0;
     margin: 0;
-    line-height: 3em;
-    list-style-type: square;
-    text-align: center;
-    word-wrap: none;
+    list-style-type: none;
 }
 
-.skills li {
+.inline-list li{
     display: inline;
     padding-left: 2em;
     white-space: nowrap;
 }
 
-.skills li::before {
+.arrow-bullet li::before {
     content: "»";
     display: inline-block;
     position: relative;
     margin: 1em 1em 0 1em;
+}
+
+.tools, .languages {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.tools h2, .languages h2 {
+    text-align: center;
+}
+
+.tools {
+    grid-area: tools;
+    width: 60%;
+}
+
+.languages {
+    grid-area: languages;
+    width: 50%;
 }
