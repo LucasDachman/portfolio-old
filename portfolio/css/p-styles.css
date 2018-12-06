@@ -26,6 +26,7 @@ p {
     box-shadow: inset -4px 0px 8px gray;
     transition: width .3s;
     overflow: hidden;
+    z-index: 5;
 }
 
 .sidebar:hover {
@@ -169,7 +170,7 @@ p {
     width: 100%;
     text-align: center;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 1.2;
     margin: 8px 0px;
 }
@@ -177,4 +178,14 @@ p {
 small {
     text-align: center;
     display: block;
+}
+
+.overlay {
+    position: absolute;
+    visibility: hidden;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(100%, 100%, 100%, 0.95);
+    transition: background-color 0.5s ease;
 }
