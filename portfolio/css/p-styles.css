@@ -114,16 +114,19 @@ p {
 .works-background {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
-    font-size: 28vw;
+    font-size: 25vw;
     line-height: .9;
     letter-spacing: 0.15em;
-    left: 30px;
+    left: 50px;
     margin: auto;
     padding: 0;
     width: 100%;
     word-break: break-all;
     color: var(--black-light);
     position: fixed;
+    transform: rotate(-10deg);
+    /* top: 100px; */
+    /* left: 80px; */
     z-index: -1;
 }
 
