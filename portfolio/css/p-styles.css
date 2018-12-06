@@ -214,9 +214,11 @@ small {
     grid-template-areas: "name title"
                         "contact education"
                         "skills skills"
-                        "tools languages";
+                        "tools languages"
+                        "experience experience"
+                        "footer footer";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 20px 20px;
 }
 
@@ -320,4 +322,23 @@ small {
 .languages {
     grid-area: languages;
     width: 50%;
+}
+
+.experience {
+    grid-area: experience;
+    position: block;
+    margin: 0 auto;
+}
+
+.experience h2 {
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+small {
+    display: inline-block;
+    font-size: 0.6em;
 }
