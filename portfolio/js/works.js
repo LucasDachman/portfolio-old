@@ -1,6 +1,6 @@
-const cardTemplate = (title, description, image) => {
+const cardTemplate = (title, description, image, url="") => {
   const card = /*html*/`
-    <a class='work-link'>
+    <a href='${url}' class='work-link'>
       <img src='${image}' class='work-image'>
       <h2 class='work-title'>${title}</h2>
       <p class='work-description'>${description}</p>
@@ -11,10 +11,9 @@ const cardTemplate = (title, description, image) => {
 
 const populateCards = () => {
   const cards = [
-    cardTemplate('Title 1', `A project about 
-    things where I used this and that to do 
-    it a way that is better because its really
-    cool.`, 'https://via.placeholder.com/400x400'),
+    cardTemplate('Origami Circuit', `Simple origami
+    with LEDs.`, './img/Origami-Circuit.gif', 
+    'https://lucasdachman.github.io/blog/atlas-object/Origami-Circuit'),
     cardTemplate('Title 2', `A project about 
     things where I used this and that to do 
     it a way that is better because its really
