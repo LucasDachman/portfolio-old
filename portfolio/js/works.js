@@ -1,8 +1,8 @@
 const cardTemplate = (title, description, image, url="") => {
   const card = /*html*/`
     <a href='${url}' class='work-link'>
-      <img src='${image}' class='work-image'>
       <h2 class='work-title'>${title}</h2>
+      <img src='${image}' class='work-image'>
       <p class='work-description'>${description}</p>
     </a>
     `;

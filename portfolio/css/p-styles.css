@@ -95,18 +95,16 @@ p {
   color: var(--black-light);
 }
 
-.works-row {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-}
-
 #works-grid {
+  position: relative;
+  top: 40px;
   margin: auto;
   width: 75%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 258px);
+  grid-gap: 4vw;
+  grid-auto-rows: minmax(100px, auto);
+  justify-content: space-around;
 }
 
 .works-background {
@@ -155,16 +153,16 @@ p {
 .work-link {
   background-color: rgba(100%, 100%, 100%, 1);
   display: block;
-  width: 20vw;
-  padding: 20px;
+  width: 100%;
   border-radius: 2px;
-  margin: 60px 0px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); */
   text-decoration: none;
 }
 
 .work-link:hover {
-  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  /* box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2); */
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .work-link h2 {
@@ -172,7 +170,7 @@ p {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 50px;
+  font-size: 34px;
   line-height: 1.2;
   margin: 8px 0px;
 }
@@ -188,7 +186,7 @@ p {
 }
 
 .work-link img {
-  border-radius: 20%;
+  border-radius: 2px;
 }
 
 small {
@@ -198,10 +196,11 @@ small {
 
 .overlay {
   position: absolute;
+  top:0;
   visibility: hidden;
   z-index: 1;
   width: 100vw;
-  height: 100vh;
+  height: 100vw;
   background-color: transparent;
   transition: background-color 0.5s ease;
 }
