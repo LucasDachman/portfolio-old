@@ -14,10 +14,10 @@ const populateCards = () => {
     cardTemplate('Origami Circuit', `Simple origami
     with LEDs.`, './img/Origami-Circuit.gif', 
     'https://lucasdachman.github.io/blog/atlas-object/Origami-Circuit'),
-    cardTemplate('Title 2', `A project about 
-    things where I used this and that to do 
-    it a way that is better because its really
-    cool.`, 'https://via.placeholder.com/400x400'),
+    cardTemplate('Cirkit', `An iOS app that calculates
+    resistor values according to color codes.`,'./img/cirkit-logo.png', 
+    'https://lucasdachman.github.io/blog/mobile-apps/milestone-4'
+    ),
     cardTemplate('Title 3', `A project about 
     things where I used this and that to do 
     it a way that is better because its really
