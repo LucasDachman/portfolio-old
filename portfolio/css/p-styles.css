@@ -42,6 +42,10 @@ p {
   box-shadow: inset -4px 0px 8px gray;
 }
 
+.sidebar:hover a {
+  display: block;
+}
+
 .sidebar nav {
   display: flex;
   flex-flow: column nowrap;
@@ -68,6 +72,10 @@ p {
   background-color: var(--black-light);
   border-radius: 22%;
   display: block;
+}
+
+.sidebar:hover .dot {
+  display: none;
 }
 
 .current-nav-item {
@@ -194,15 +202,21 @@ small {
   display: block;
 }
 
+.sidebar:hover + .overlay {
+  visibility: visible;
+  background-color: rgba(100%, 100%, 100%, 0.95);
+}
+
 .overlay {
-  position: absolute;
+  position: fixed;
   top:0;
   visibility: hidden;
   z-index: 1;
   width: 100vw;
   height: 100vw;
   background-color: transparent;
-  transition: background-color 0.5s ease;
+  transition-property: background-color, visibility;
+  transition-duration: 0.5s;
 }
 
 /* resume */
