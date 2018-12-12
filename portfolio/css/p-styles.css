@@ -33,7 +33,6 @@ p {
 .sidebar:hover {
   background-color: var(--gray);
   position: fixed;
-  font-size: 30px;
   height: 100%;
   width: 10em;
   display: flex;
@@ -109,7 +108,7 @@ p {
   margin: auto;
   width: 75%;
   display: grid;
-  grid-template-columns: repeat(3, 258px);
+  grid-template-columns: repeat(3, 25vw);
   grid-gap: 4vw;
   grid-auto-rows: minmax(100px, auto);
   justify-content: space-around;
@@ -359,4 +358,120 @@ footer {
 small {
   display: inline-block;
   font-size: 0.6em;
+}
+
+@media screen and (max-width: 768px) {
+
+  #works-grid {
+    top: 60px;
+    grid-template-columns: repeat(2, 35vw);
+  }
+
+  .sidebar {
+    background-color: var(--gray);
+    position: fixed;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    box-shadow: none;
+    transition: none;
+    overflow: hidden;
+    z-index: 5;
+  }
+
+  .sidebar:hover {
+    background-color: var(--gray);
+    position: fixed;
+    height: 25px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    box-shadow: none;
+  }
+
+  .sidebar:hover a {
+    display: inline-block;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+
+  .sidebar a {
+    display: inline-block;
+    padding: 8px 4vw;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    color: var(--black-light);
+    /* background-color: var(--gray); */
+    transition: background-color 0.1s;
+  }
+
+  .sidebar .dot {
+    display: none;
+  }
+
+  .sidebar:hover .dot {
+    display: none;
+  }
+
+  .current-nav-item {
+    background-color: var(--gray-light);
+    box-shadow: none;
+  }
+
+  /* unvisited link */
+
+  .sidebar a:link, a:visited {
+    color: var(--black-light);
+  }
+
+  /* mouse over link */
+
+  .sidebar a:hover {
+    color: var(--black-light);
+    background-color: var(--gray-light);
+    box-shadow: none;
+  }
+
+  /* selected link */
+
+  .sidebar a:active {
+    color: var(--black-light);
+  }
+
+  .works-background {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 18vw;
+    line-height: .9;
+    letter-spacing: 0.15em;
+    text-align: center;
+    left: 0px;
+    top: 50px;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    word-break: break-all;
+    color: var(--black-light);
+    position: relative;
+    transform: rotate(0);
+    z-index: 1;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  #works-grid {
+    grid-template-columns: 70vw;
+  }
+
 }
