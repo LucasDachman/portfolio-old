@@ -371,6 +371,13 @@ small {
   font-size: 0.6em;
 }
 
+.synth {
+  width: 80%;
+  margin: 0 auto;
+  position: absolute;
+  left: 40px;
+}
+
 @media screen and (max-width: 768px) {
 
   #works-grid {

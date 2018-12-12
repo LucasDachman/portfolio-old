@@ -1,22 +1,51 @@
 // var Tone = window.Tone;
 var Tone = window.Tone;
 
-var synth = new Tone.Synth().toMaster()
+Tone.Transport.bpm = 120;
 
-//pass in an array of events
-var part = new Tone.Part(function(time, event){
-	//the events will be given to the callback with the time they occur
-	synth.triggerAttackRelease(event.note, event.dur, time)
-}, [{ time : 0, note : 'C4', dur : '4n'},
-	{ time : '4n + 8n', note : 'E4', dur : '8n'},
-	{ time : '2n', note : 'G4', dur : '16n'},
-	{ time : '2n + 8t', note : 'B4', dur : '4n'}])
+var polySynth = new Tone.PolySynth().toMaster()
+polySynth.set({
+  oscillator: {
+    type: 'sawtooth'
+  },
+  envelope: {
+    attack: 0.005,
+    decay: 0.08,
+    sustain: 0.01,
+    release: 1
+  }
+
+})
+
+var pattern = new Tone.Pattern(function (time, note) {
+  polySynth.triggerAttackRelease(note, "8n");
+}, ["F3", "A4", "C4", "D4"]);
 
 //start the part at the beginning of the Transport's timeline
-part.start(0)
+pattern.start(0)
+pattern.interval = "16n";
 
-//loop the part 3 times
-part.loop = 3
-part.loopEnd = '1m'
 
-Tone.Transport.start('+0.1')
+const playButton = document.getElementsByName('play')[0];
+const decaySlider = document.getElementsByName('decay')[0];
+
+playButton.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    Tone.Transport.start('+0.1')
+  } else {
+    Tone.Transport.stop()
+  }
+});
+
+decaySlider.addEventListener('input', (e) => {
+  let val = mapRange(e.target.value, 1, 100, 0.1, 1.5);
+  console.log(val);
+  polySynth.set({
+    envelope: {decay: val}
+
+  })
+});
+
+const mapRange = function (val, in_min, in_max, out_min, out_max) {
+  return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
