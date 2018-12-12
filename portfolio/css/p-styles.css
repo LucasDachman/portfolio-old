@@ -466,12 +466,103 @@ small {
     transform: rotate(0);
     z-index: 1;
   }
+
+  .sidebar:hover + .overlay {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  /* resume */
+
+  .resume-container {
+    top: 50px;
+  }
 }
 
 
 @media screen and (max-width: 425px) {
   #works-grid {
     grid-template-columns: 70vw;
+  }
+
+  .resume-container {
+    grid-template-areas: "name title" 
+                          "contact contact"
+                          "education education" 
+                          "skills skills" 
+                          "tools tools" 
+                          "languages languages" 
+                          "experience experience" 
+                          "footer footer";
+    grid-template-columns: 1fr;
+  }
+
+  .resume-header {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 7vw;
+    color: var(--blue);
+    letter-spacing: 0.1em;
+    padding: 0 auto;
+  }
+
+  .resume-name {
+    grid-area: name;
+    text-align: right;
+    border-right: 3px solid var(--black-light);
+  }
+
+  .resume-title {
+    grid-area: title;
+    text-align: left;
+    border-left: 3px solid var(--black-light);
+  }
+
+  .contact {
+    margin: 0 8px;
+  }
+
+  .education {
+    margin: 0 8px;
+  }
+
+  .skills {
+    text-align: left;
+    margin: 0 8px;
+    line-height: normal;
+  }
+
+  .inline-list li {
+    display: block;
+    padding: 0;
+  }
+
+  .arrow-bullet li::before {
+    margin: 0.5em 1em 0.5em 0;
+  }
+
+  .tools, .languages {
+    margin: 0 8px;
+    text-align: left;
+    line-height: normal;
+  }
+
+  .tools h2, .languages h2 {
+    text-align: left;
+  }
+
+  .experience {
+    margin: 0 8px;
+  }
+
+  .experience h2 {
+    text-align: left;
+  }
+
+  footer {
+    margin: 10px auto;
   }
 
 }
