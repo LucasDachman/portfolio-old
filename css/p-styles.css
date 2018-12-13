@@ -112,6 +112,7 @@ p {
   grid-gap: 6vw;
   grid-auto-rows: minmax(100px, auto);
   justify-content: space-around;
+  color: var(--black-light);
 }
 
 .works-background {
@@ -212,6 +213,7 @@ p {
 
 .work-link, .work-link:link, .work-link:visited {
   background-color: rgba(100%, 100%, 100%, 1);
+  color: var(--black-light);
   display: block;
   width: 100%;
   border-radius: 2px;
@@ -223,12 +225,14 @@ p {
 .work-link:hover, .work-link:active {
   /* box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2); */
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+  color: var(--black-light);
 }
 
 .work-link h2 {
   font-family: 'Open Sans', sans-serif;
   display: block;
   width: 100%;
+  color: var(--black-light);
   text-align: center;
   font-size: 34px;
   line-height: 1.2;
@@ -243,6 +247,7 @@ p {
   font-size: 18px;
   line-height: 1.2;
   margin: 8px 0px;
+  color: var(--black-light);
 }
 
 .work-link img {
