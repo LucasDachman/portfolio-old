@@ -18,10 +18,9 @@ const populateCards = () => {
     resistor values according to color codes.`,'./img/cirkit-logo.png', 
     'https://lucasdachman.github.io/blog/mobile-apps/milestone-4'
     ),
-    cardTemplate('Title 3', `A project about 
-    things where I used this and that to do 
-    it a way that is better because its really
-    cool.`, 'https://via.placeholder.com/400x400'),
+    cardTemplate('Kinetic Typography', `A moving 
+    typographic sculpture.`, 
+    './img/wakemake.png', 'https://lucasdachman.github.io/blog/typography/wake-make'),
     cardTemplate('Title 4', `A project about 
     things where I used this and that to do 
     it a way that is better because its really

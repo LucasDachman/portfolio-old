@@ -16,7 +16,7 @@
       <div class="dot"></div>
       <div class="dot"></div>
       <div class="dot"></div>
-      <a href="./about.html" class="nav-item">About</a>
+      <a href="./index.html" class="current-nav-item nav-item">About</a>
       <a href="./resume.html" class="nav-item">Resume</a>
       <a href="./works.html" class="nav-item">Works</a>
     </nav>
@@ -31,12 +31,11 @@
     <img class='profile' src='../img/Lucas.jpg' alt="Lucas"/>
     <section class="synth">
       <form>
-        <label for="play">Play</label>
-        <input type="checkbox" name="play" value="on">
+        <button type="button" class='btn btn-paused' id='play'>Play</button>
       </form>
       <form>
         <label for="decay">Shape</label>
-        <input type="range" min="1" max="100" value="50" class="slider" name="decay">
+        <input type="range" min="1" max="100" value="100" class="slider" name="decay">
       </form>
       <form>
         <label for="filter">Filter</label>

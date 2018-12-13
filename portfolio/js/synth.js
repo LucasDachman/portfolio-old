@@ -1,9 +1,18 @@
 var Tone = window.Tone;
 
-Tone.Transport.bpm = 120;
+var playing = false;
+const playButton = document.getElementById('play');
+const decaySlider = document.getElementsByName('decay')[0];
+const chordForm = document.getElementById('chord');
+const filterSlider = document.getElementById('filter');
 
+const dm7 = ["F3", "A4", "C4", "D4"];
+const am7 = ["C4", "E3", "G4", "A4"];
+const asM7 = ["F3", "A4", "A#4", "D4"];
+
+Tone.Transport.bpm = 120;
 var chorus = new Tone.Chorus(4, 2.5, 0.5);
-var filter = new Tone.Filter(500, "lowpass");
+var filter = new Tone.Filter(3000, "lowpass");
 
 var polySynth = new Tone.PolySynth();
 polySynth.set({
@@ -12,33 +21,16 @@ polySynth.set({
   },
   envelope: {
     attack: 0.005,
-    decay: 0.08,
+    decay: 1.5,
     sustain: 0.1,
     release: 1
   }
-
-})
-
+});
 polySynth.chain(filter, chorus, Tone.Master);
-
-const dm7 = ["F3", "A4", "C4", "D4"];
-const am7 = ["C4", "E3", "G4", "A4"];
-const asM7 = ["F3", "A4", "A#4", "D4"];
 
 var pattern = new Tone.Pattern(function (time, note) {
   polySynth.triggerAttackRelease(note, "8n");
 }, dm7);
-
-//start the part at the beginning of the Transport's timeline
-pattern.start(0)
-pattern.interval = "16n";
-pattern.humanize = false;
-
-
-const playButton = document.getElementsByName('play')[0];
-const decaySlider = document.getElementsByName('decay')[0];
-const chordForm = document.getElementById('chord');
-const filterSlider = document.getElementById('filter');
 
 chordForm.addEventListener('change', (e) => {
   switch(e.target.value) {
@@ -54,11 +46,17 @@ chordForm.addEventListener('change', (e) => {
   }
 });
 
-playButton.addEventListener('change', (e) => {
-  if (e.target.checked) {
-    Tone.Transport.start('+0.1')
-  } else {
+playButton.addEventListener('click', (e) => {
+  if (playing) {
     Tone.Transport.stop()
+    playing = false;
+    playButton.innerText = 'Play'
+    playButton.className = 'btn btn-paused'
+  } else {
+    Tone.Transport.start('+0.1')
+    playing = true;
+    playButton.innerText = 'Stop'
+    playButton.className = 'btn btn-playing'
   }
 });
 
@@ -79,9 +77,11 @@ filterSlider.addEventListener('input', (e) => {
   filter.frequency.value = value;
 });
 
-
-
-
 const mapRange = function (val, in_min, in_max, out_min, out_max) {
   return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
+
+//start the part at the beginning of the Transport's timeline
+pattern.start(0)
+pattern.interval = "16n";
+pattern.humanize = false;

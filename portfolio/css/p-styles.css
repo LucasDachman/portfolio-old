@@ -175,15 +175,42 @@ p {
 }
 
 .synth {
-  display: block;
-  width: 80%;
+  max-width: 200px;
   margin: auto;
+  border-radius: 4px;
+  background-color: var(--black-light);
+  color: white;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .synth form {
+  width: auto;
   display: block;
   text-align: center;
   padding: 10px 0;
+}
+
+.btn {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.btn-playing {
+  background-color: white;
+  color: var(--black-light);
+  border: 1px solid white;
+}
+
+.btn-paused {
+  background-color: var(--black-light);
+  color: white;
+  border: 1px solid white;
+}
+
+.slider {
 }
 
 .work-link {
@@ -223,6 +250,7 @@ p {
 
 .work-link img {
   border-radius: 2px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
 }
 
 small {
