@@ -133,8 +133,12 @@ p {
   z-index: -1;
 }
 
+.index-container {
+  display: block;
+}
+
 .title-name {
-  position: static;
+  /* position: static; */
   margin: 0 auto;
   width: 100%;
 }
@@ -151,21 +155,35 @@ p {
 }
 
 .title-lucas {
-  font-size: 28vw;
+  font-size: 12vw;
 }
 
 .title-dachman {
-  font-size: 17vw;
+  font-size: 7.2vw;
 }
 
 .bio {
-  margin: 0 7vw;
-  width: 35%;
+  margin: 0 auto;
+  width: 37%;
 }
 
-.bio img {
-  width: 100%;
+.profile {
+  display: block;
+  margin: 30px auto;
+  width: 200px;
   height: 100%;
+}
+
+.synth {
+  display: block;
+  width: 80%;
+  margin: auto;
+}
+
+.synth form {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
 }
 
 .work-link {
@@ -371,12 +389,10 @@ small {
   font-size: 0.6em;
 }
 
-.synth {
+/* .synth form {
   width: 80%;
   margin: 0 auto;
-  position: absolute;
-  left: 40px;
-}
+} */
 
 @media screen and (max-width: 768px) {
 

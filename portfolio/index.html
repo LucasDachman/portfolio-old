@@ -22,28 +22,33 @@
     </nav>
   </div>
   <div class='overlay'></div>
-  <header class="title-name">
-    <h1 class='title-lucas'>Lucas</h1>
-    <h1 class='title-dachman'>Dachman</h1>
-  </header>
-  <section class="bio">
-    <img src='../img/Lucas.jpg' style='width: 250px;' alt="Lucas"/>
-    <p>I am an Engineering student at the University of Colorado Bouler. I study Technology Art and Media (TAM) and Computer Science. My interests include Software Dev, Web Design, Physical Computing, Mobile Applications, Music Technology and more...</p>
-  </section>
-  <section class="synth">
-    <form>
-      <input type="checkbox" name="play" value="on">
-      <label for="play">Play</label>
-      <input type="range" min="1" max="100" value="50" class="slider" name="decay">
-      <label for="decay">Shape</label>
-      <input type="range" min="1" max="100" value="100" class="slider" id="filter" name="filter">
-      <label for="filter">Filter</label>
-    </form>
-    <form id="chord">
-      <input type="radio" name="chord" value="dm7" checked> D Minor 7<br>
-      <input type="radio" name="chord" value="am7"> A Minor 7<br>
-      <input type="radio" name="chord" value="asM7"> A# Major 7
-    </form>
-  </section>
+  <div class='index-container'>
+    <header class="title-name">
+      <h1 class='title-lucas'>Lucas</h1>
+      <h1 class='title-dachman'>Dachman</h1>
+    </header>
+    <p class='bio'>Software Developer, Front-End, Mobile Applications, Music Technology</p>
+    <img class='profile' src='../img/Lucas.jpg' alt="Lucas"/>
+    <section class="synth">
+      <form>
+        <label for="play">Play</label>
+        <input type="checkbox" name="play" value="on">
+      </form>
+      <form>
+        <label for="decay">Shape</label>
+        <input type="range" min="1" max="100" value="50" class="slider" name="decay">
+      </form>
+      <form>
+        <label for="filter">Filter</label>
+        <input type="range" min="1" max="100" value="100" class="slider" id="filter" name="filter">
+      </form>
+      <form id="chord">
+        <h4>Choose a chord</h4>
+        <input type="radio" name="chord" value="dm7" checked> D Minor 7<br>
+        <input type="radio" name="chord" value="am7"> A Minor 7<br>
+        <input type="radio" name="chord" value="asM7"> A# Major 7
+      </form>
+    </section>
+  </div>
   </body>
 </html>
