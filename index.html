@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html lang=en>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lucas Dachman - ATLAS WEB</title>
-  <link href="./css/styles.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./js/Tone.min.js"></script>
+  <script src="js/synth.js" defer></script>
+  <script src='./js/sidebar.js' defer></script>
+  <link rel="stylesheet" href="./css/p-styles.css">
+  <title>Lucas Dachman</title>
 </head>
 <body>
-  <nav id="header-nav">
-    <a href="./index.html">Home</a>
-    <div id="sub-nav">
-      <a href="./labs.html">Labs</a>
-      <a href="./projects.html">Projects</a>
-    </div>
-  </nav>
-  <div class="container">
-    <header class="display-header">
-        <div id="title-name">Lucas Dachman</div>
-        ATLAS WEB
+  <div class='sidebar'>
+    <nav>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <a href="./index.html" class="current-nav-item nav-item">About</a>
+      <a href="./resume.html" class="nav-item">Resume</a>
+      <a href="./works.html" class="nav-item">Works</a>
+    </nav>
+  </div>
+  <div class='overlay'></div>
+  <div class='index-container'>
+    <header class="title-name">
+      <h1 class='title-lucas'>Lucas</h1>
+      <h1 class='title-dachman'>Dachman</h1>
     </header>
-    <section>
-      <img src='./img/Lucas.jpg' style='width: 250px;' alt="Lucas"/>
-      <p style="width: 450px">
-          I am an Engineering student at the University
-          of Colorado Bouler. I study Technology Art
-          and Media (TAM) and Computer Science. My
-          interests include Software Dev, Web Design,
-          Physical Computing, Mobile Applications,
-          Music Technology and more...
-        </p>
+    <p class='bio'>Software Developer, Front-End, Mobile Applications, Music Technology</p>
+    <img class='profile' src='../img/Lucas.jpg' alt="Lucas"/>
+    <section class="synth">
+      <form>
+        <button type="button" class='btn btn-paused' id='play'>Play</button>
+      </form>
+      <form>
+        <label for="decay">Shape</label>
+        <input type="range" min="1" max="100" value="100" class="slider" name="decay">
+      </form>
+      <form>
+        <label for="filter">Filter</label>
+        <input type="range" min="1" max="100" value="100" class="slider" id="filter" name="filter">
+      </form>
+      <form id="chord">
+        <h4>Choose a chord</h4>
+        <input type="radio" name="chord" value="dm7" checked> D Minor 7<br>
+        <input type="radio" name="chord" value="am7"> A Minor 7<br>
+        <input type="radio" name="chord" value="asM7"> A# Major 7
+      </form>
     </section>
   </div>
-</body>
-
+  </body>
 </html>
