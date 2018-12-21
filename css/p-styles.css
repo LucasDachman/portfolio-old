@@ -425,6 +425,10 @@ small {
 
 @media screen and (max-width: 768px) {
 
+  .index-container {
+    padding-top: 80px;
+  }
+
   #works-grid {
     top: 60px;
     grid-template-columns: repeat(2, 35vw);
@@ -547,6 +551,11 @@ small {
 
 
 @media screen and (max-width: 425px) {
+
+  .index-container {
+    padding-top: 20px;
+  }
+
   #works-grid {
     grid-template-columns: 70vw;
   }
@@ -634,6 +643,6 @@ small {
   }
 
   .title-name {
-    padding: 35px 0;
+    padding: 35px 0 0 0;
   }
 }
