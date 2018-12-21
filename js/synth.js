@@ -53,10 +53,13 @@ playButton.addEventListener('click', (e) => {
     playButton.innerText = 'Play'
     playButton.className = 'btn btn-paused'
   } else {
-    Tone.Transport.start('+0.1')
-    playing = true;
-    playButton.innerText = 'Stop'
-    playButton.className = 'btn btn-playing'
+    Tone.context.resume()
+    .then(() => {
+      Tone.Transport.start('+0.1')
+      playing = true;
+      playButton.innerText = 'Stop'
+      playButton.className = 'btn btn-playing'
+    })
   }
 });
 
