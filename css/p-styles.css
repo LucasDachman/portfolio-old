@@ -167,6 +167,7 @@ p {
 .bio {
   margin: 0 auto;
   width: 37%;
+  text-align: center;
 }
 
 .profile {
