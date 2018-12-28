@@ -216,11 +216,12 @@ p {
 .work-link, .work-link:link, .work-link:visited {
   background-color: rgba(100%, 100%, 100%, 1);
   color: var(--black-light);
-  display: block;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   width: 100%;
   border-radius: 2px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); */
   text-decoration: none;
 }
 
@@ -230,17 +231,6 @@ p {
   color: var(--black-light);
 }
 
-.work-link h2 {
-  font-family: 'Open Sans', sans-serif;
-  display: block;
-  width: 100%;
-  color: var(--black-light);
-  text-align: center;
-  font-size: 34px;
-  line-height: 1.2;
-  margin: 8px 0px;
-}
-
 .work-link p {
   display: block;
   width: 90%;
@@ -248,7 +238,8 @@ p {
   font-family: 'Merriweather', 'Times New Roman', Times, serif;
   font-size: 16px;
   line-height: 1.2;
-  margin: 8px auto;
+  margin: auto;
+  padding: 10px 0;
   color: var(--black-light);
 }
 
