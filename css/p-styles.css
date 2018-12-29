@@ -410,11 +410,6 @@ small {
   font-size: 0.6em;
 }
 
-/* .synth form {
-  width: 80%;
-  margin: 0 auto;
-} */
-
 @media screen and (max-width: 768px) {
 
   .index-container {
