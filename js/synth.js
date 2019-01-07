@@ -2,6 +2,7 @@ var Tone = window.Tone;
 
 var playing = false;
 const playButton = document.getElementById('play');
+const tempoSlider = document.getElementById('tempo');
 const decaySlider = document.getElementsByName('decay')[0];
 const chordForm = document.getElementById('chord');
 const filterSlider = document.getElementById('filter');
@@ -10,7 +11,7 @@ const dm7 = ["F3", "A4", "C4", "D4"];
 const am7 = ["C4", "E3", "G4", "A4"];
 const asM7 = ["F3", "A4", "A#4", "D4"];
 
-Tone.Transport.bpm = 120;
+Tone.Transport.bpm.value = 120;
 var chorus = new Tone.Chorus(4, 2.5, 0.5);
 var filter = new Tone.Filter(3000, "lowpass");
 
@@ -63,6 +64,10 @@ playButton.addEventListener('click', (e) => {
   }
 });
 
+tempoSlider.addEventListener('input', (e) => {
+  Tone.Transport.bpm.rampTo(e.target.value, 0.01);
+});
+
 decaySlider.addEventListener('input', (e) => {
   let attack = mapRange(e.target.value, 1, 100, .1, .005);
   let decay = mapRange(e.target.value, 1, 100, 0.2, 1.5);
@@ -76,7 +81,6 @@ decaySlider.addEventListener('input', (e) => {
 
 filterSlider.addEventListener('input', (e) => {
   let value = mapRange(e.target.value, 1, 100, 0, 3000);
-  console.log(value);
   filter.frequency.value = value;
 });
 

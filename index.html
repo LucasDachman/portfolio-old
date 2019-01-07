@@ -31,17 +31,26 @@
     <p class='bio'>Software Developer, Front-End, Mobile Applications, Music Technology</p>
     <img class='profile' src='./img/Lucas.jpg' alt="Lucas"/>
     <section class="synth">
+      <!-- Play / Pause -->
       <form>
         <button type="button" class='btn btn-paused' id='play'>Play</button>
       </form>
+      <!-- Tempo -->
+      <form>
+        <label for="tempo">Tempo</label>
+        <input type="range" min='50' max='200' value='120' class='slider' id='tempo' name='tempo'>
+      </form>
+      <!-- Shape -->
       <form>
         <label for="decay">Shape</label>
         <input type="range" min="1" max="100" value="100" class="slider" id='decay' name="decay">
       </form>
+      <!-- Filter -->
       <form>
         <label for="filter">Filter</label>
         <input type="range" min="1" max="100" value="100" class="slider" id="filter" name="filter">
       </form>
+      <!-- Chord -->
       <form id="chord">
         <h4>Choose a chord</h4>
         <input type="radio" name="chord" value="dm7" checked> D Minor 7<br>
