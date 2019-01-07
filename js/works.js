@@ -10,11 +10,14 @@ const cardTemplate = (description, image, url="") => {
 
 const populateCards = () => {
   const cards = [
+    cardTemplate(`The Foot Step Sequencer: An interactive music floor.`,
+    './img/fss-interaction.png', 
+    'https://lucasdachman.github.io/blog/physical-computing/fss'),
     cardTemplate(`A wearable device that
     detects distance and sends the data to any music software.`,
     './img/wearable-midi.JPG', 
     'https://lucasdachman.github.io/blog/atlas-object/project-2'),
-    cardTemplate(`An iOS app that does common circuit calculations`,
+    cardTemplate(`An iOS app that does common circuit calculations.`,
     './img/cirkit-logo.png',
     'https://lucasdachman.github.io/blog/mobile-apps/milestone-3'),
     cardTemplate(`An app that calculates
@@ -25,8 +28,7 @@ const populateCards = () => {
     'https://creative.colorado.edu/~luda3983/web/projects/zen-garden/index.html'),
     cardTemplate(`A moving typographic sculpture.`, 
     './img/wakemake.png', 'https://lucasdachman.github.io/blog/typography/wake-make'),
-    cardTemplate(`Simple origami
-    with LEDs.`, './img/Origami-Circuit.gif', 
+    cardTemplate(`Simple origami with LEDs.`, './img/Origami-Circuit.gif', 
     'https://lucasdachman.github.io/blog/atlas-object/Origami-Circuit'),
   ];
 
