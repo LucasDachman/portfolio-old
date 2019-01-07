@@ -194,6 +194,13 @@ p {
   padding: 10px 0;
 }
 
+.synth small {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: var(--gray);
+}
+
 .btn {
   box-sizing: border-box;
   text-decoration: none;
