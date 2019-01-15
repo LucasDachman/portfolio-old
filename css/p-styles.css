@@ -221,6 +221,39 @@ p {
   border: 1px solid white;
 }
 
+.chord-creator {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+.note-btn {
+  text-decoration: none;
+  outline: 0;
+  border: none;
+  height: 40px;
+  border-radius: 2px;
+  transition: background-color .2s;
+}
+
+.note-btn:hover {
+  background-color: var(--gray);
+}
+
+.note-btn-on {
+  background-color: rgb(255, 162, 0);
+}
+
+.note-btn-off {
+  background-color: white;
+}
+
+.note-btn-playing {
+  background-color: red;
+}
+
+/* works page */
+
 .work-link, .work-link:link, .work-link:visited {
   background-color: rgba(100%, 100%, 100%, 1);
   color: var(--black-light);
