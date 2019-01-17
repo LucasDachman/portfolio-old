@@ -36,11 +36,11 @@ var pattern = new Tone.Pattern(function (time, note) {
   polySynth.triggerAttackRelease(note, "8n", time);
   Tone.Draw.schedule(function(){
     const button = document.getElementById(note);
-    button.classList.add('note-btn-playing')
+    button && button.classList.add('note-btn-playing')
 	}, time) //use AudioContext time of the event
   Tone.Draw.schedule(function(){
     const button = document.getElementById(note);
-    button.classList.remove('note-btn-playing')
+    button && button.classList.remove('note-btn-playing')
 	}, Tone.Time(time) + Tone.Time('8n') ) //use AudioContext time of the event
 }, []);
 
@@ -111,3 +111,4 @@ setPattern();
 pattern.start(0)
 pattern.interval = "16n";
 pattern.humanize = false;
+
