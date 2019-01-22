@@ -1,5 +1,5 @@
 var Tone = window.Tone;
-
+/*
 //  viz
 const resolution = 128;
 // const resolution = 1024;
@@ -25,3 +25,16 @@ setInterval(() => {
     });
     console.log("Waveform: ", value);
 }, 20);
+*/
+var data = {
+  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+  datasets: [{
+    label: "Car Speed",
+    data: [0, 59, 75, 20, 20, 55, 40],
+  }]
+};
+var ctx = document.getElementById('viz').getContext('2d');
+var viz = new Chart(ctx, {
+  type: 'line',
+  data: data,
+});
