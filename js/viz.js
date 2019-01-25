@@ -1,61 +1,40 @@
 var Tone = window.Tone;
-/*
 //  viz
-const resolution = 128;
 // const resolution = 1024;
-const meter = document.getElementById('meter');
-const viz = document.getElementById('viz');
+// const resolution = 256;
+const resolution = 512;
 const waveform = new Tone.Analyser('waveform', resolution);
 waveform.smoothing = 1;
 Tone.Master.connect(waveform);
 
-for (let i = 0; i < resolution; i++) {
-  viz.innerHTML += `<div class='meter-slice' id='slice-${i}'>`;
-}
-const slices = document.getElementsByClassName('meter-slice');
-
 setInterval(() => {
     const value = waveform.getValue();
-    value.forEach((amplitude, index) => {
-      amplitude += 1;
-      amplitude *= 50;
-      amplitude = Math.floor(amplitude);
-      let slice = slices[index];
-      slice.style.height = `${amplitude}%`;
-    });
-    console.log("Waveform: ", value);
+    viz.data.datasets[0].data = value;
+    viz.update();
 }, 20);
-*/
+
+
 var data = {
-  labels: new Array(7),
+  labels: new Array(resolution),
   datasets: [{
     label: "Amplitude",
-    data: [0, 59, 75, 20, 20, 55, 40],
+    data: new Array(resolution).fill(0),
     fill: false,
     backgroundColor: 'rgba(0,0,0,0)',
     borderColor: 'rgb(51,51,51)',
-    pointRadius: 0
+    pointRadius: 0,
+    // lineTension: 0.8,
   }]
 };
 
-const axes = {
-  gridLines: {
-      display:false,
-      drawBorder: false,
-      drawTicks: false,
-  },
-  ticks: {
-    display: false
-  }
-}
-
 const options = {
+  maintainAspectRatio: false,
   layout: {
     padding: {
       top: 10,
-      right: 40,
+      right: 10,
       bottom: 10,
-      left: 10
+      left: 40
     }
   },
   legend: {
@@ -65,12 +44,28 @@ const options = {
     enabled: false,
   },
   scales: {
-    xAxes: [
-      axes
-    ],
-    yAxes: [
-      axes
-    ]
+    xAxes: [{
+      gridLines: {
+          display:false,
+          drawBorder: false,
+          drawTicks: false,
+      },
+      ticks: {
+        display: false
+      }
+    }],
+    yAxes: [{
+      gridLines: {
+          display:false,
+          drawBorder: false,
+          drawTicks: false,
+      },
+      ticks: {
+        display: false,
+        min: -0.8,
+        max: 0.8
+      }
+    }]
   }
 }
 

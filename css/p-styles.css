@@ -254,12 +254,11 @@ p {
 
 /* Viz */
 
-
 .viz {
   position: relative;
-  width: 90%;
-  height: 300px;
   margin: auto;
+  /* width: 100vw; */
+  /* height: 100px; */
   /* top: 40%; */
   /* display: flex; */
   /* flex-flow: row nowrap; */
