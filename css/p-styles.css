@@ -254,29 +254,17 @@ p {
 
 /* Viz */
 
+
 .viz {
-  position: fixed;
-  width: 100%;
+  position: relative;
+  width: 90%;
   height: 300px;
-  top: 40%;
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: flex-end;
-  z-index: -1;
-}
-
-.meter {
-  width: 100%;
-  height: 1%;
-  bottom: 0px;
-}
-
-.meter-slice {
-  display: inline-block;
-  height: 50%;
-  bottom: 0px;
-  width: 100%;
-  border-top: 4px solid var(--black-light);
+  margin: auto;
+  /* top: 40%; */
+  /* display: flex; */
+  /* flex-flow: row nowrap; */
+  /* align-items: flex-end; */
+  /* z-index: -1; */
 }
 
 /* works page */

@@ -27,14 +27,56 @@ setInterval(() => {
 }, 20);
 */
 var data = {
-  labels: ["0s", "10s", "20s", "30s", "40s", "50s", "60s"],
+  labels: new Array(7),
   datasets: [{
-    label: "Car Speed",
+    label: "Amplitude",
     data: [0, 59, 75, 20, 20, 55, 40],
+    fill: false,
+    backgroundColor: 'rgba(0,0,0,0)',
+    borderColor: 'rgb(51,51,51)',
+    pointRadius: 0
   }]
 };
-var ctx = document.getElementById('viz').getContext('2d');
-var viz = new Chart(ctx, {
+
+const axes = {
+  gridLines: {
+      display:false,
+      drawBorder: false,
+      drawTicks: false,
+  },
+  ticks: {
+    display: false
+  }
+}
+
+const options = {
+  layout: {
+    padding: {
+      top: 10,
+      right: 40,
+      bottom: 10,
+      left: 10
+    }
+  },
+  legend: {
+    display: false,
+  },
+  tooltips: {
+    enabled: false,
+  },
+  scales: {
+    xAxes: [
+      axes
+    ],
+    yAxes: [
+      axes
+    ]
+  }
+}
+
+const ctx = document.getElementById('viz').getContext('2d');
+const viz = new Chart(ctx, {
   type: 'line',
   data: data,
+  options: options
 });
