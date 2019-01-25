@@ -1,6 +1,6 @@
 # Hello
 
-This is where the code for my portfolio and web classes lives.
+This is where the code for my portfolio.
 
 Tools used in this project
 
