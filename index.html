@@ -37,9 +37,12 @@
       <form>
         <button type="button" class='btn btn-paused' id='play'>Play</button>
       </form>
-    <section class='viz'>
-      <canvas id='viz'></canvas>
+    <section class='wave-viz'>
+      <canvas id='wave-viz'></canvas>
     </section>
+    <div class='fft-viz'>
+      <canvas id="fft-viz"></canvas>
+    </div>
       <!-- Tempo -->
       <form>
         <label for="tempo">Tempo</label>
@@ -62,9 +65,9 @@
           <button onClick='onChordChange(this, 0)' class="note-btn note-btn-on" type='button'></button>
           <button onClick='onChordChange(this, 1)' class="note-btn note-btn-off" type='button'></button>
           <button onClick='onChordChange(this, 2)' class="note-btn note-btn-off" type='button'></button>
-          <button onClick='onChordChange(this, 3)' class="note-btn note-btn-on" type='button'></button>
+          <button onClick='onChordChange(this, 3)' class="note-btn note-btn-off" type='button'></button>
           <button onClick='onChordChange(this, 4)' class="note-btn note-btn-off" type='button'></button>
-          <button onClick='onChordChange(this, 5)' class="note-btn note-btn-on" type='button'></button>
+          <button onClick='onChordChange(this, 5)' class="note-btn note-btn-off" type='button'></button>
           <button onClick='onChordChange(this, 6)' class="note-btn note-btn-off" type='button'></button>
           <button onClick='onChordChange(this, 7)' class="note-btn note-btn-off" type='button'></button>
         </div>

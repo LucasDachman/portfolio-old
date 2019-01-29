@@ -38,10 +38,6 @@ var pattern = new Tone.Pattern(function (time, note) {
     const button = document.getElementById(note);
     button && button.classList.add('note-btn-playing')
 	}, time) //use AudioContext time of the event
-  Tone.Draw.schedule(function(){
-    const button = document.getElementById(note);
-    button && button.classList.remove('note-btn-playing')
-	}, Tone.Time(time) + Tone.Time('8n') ) //use AudioContext time of the event
 }, []);
 
 playButton.addEventListener('click', (e) => {
@@ -50,6 +46,7 @@ playButton.addEventListener('click', (e) => {
     playing = false;
     playButton.innerText = 'Play'
     playButton.className = 'btn btn-paused'
+    clearNoteButtons()
   } else {
     Tone.context.resume()
     .then(() => {
@@ -101,6 +98,12 @@ const setPattern = () => {
 
 const mapRange = function (val, in_min, in_max, out_min, out_max) {
   return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
+
+const clearNoteButtons = () => {
+  for(let i = 0; i < noteButtons.length; i++) {
+    noteButtons[i].classList.remove('note-btn-playing')
+  }
 }
 
 for(let i = 0; i < noteButtons.length; i++) {
