@@ -6,7 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="./favicon.png">
   <script src="./js/Tone.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
   <script src="js/synth.js" defer></script>
+  <script src="js/viz.js" defer></script>
   <script src='./js/sidebar.js' defer></script>
   <link rel="stylesheet" href="./css/p-styles.css">
   <title>Lucas Dachman</title>
@@ -35,6 +37,12 @@
       <form>
         <button type="button" class='btn btn-paused' id='play'>Play</button>
       </form>
+    <section class='wave-viz'>
+      <canvas id='wave-viz'></canvas>
+    </section>
+    <div class='fft-viz'>
+      <canvas id="fft-viz"></canvas>
+    </div>
       <!-- Tempo -->
       <form>
         <label for="tempo">Tempo</label>
@@ -51,11 +59,18 @@
         <input type="range" min="1" max="100" value="100" class="slider" id="filter" name="filter">
       </form>
       <!-- Chord -->
-      <form id="chord">
-        <h4>Choose a chord</h4>
-        <input type="radio" name="chord" value="dm7" checked> D Minor 7<br>
-        <input type="radio" name="chord" value="am7"> A Minor 7<br>
-        <input type="radio" name="chord" value="asM7"> A# Major 7
+      <form>
+        <h4>Create a chord</h4>
+        <div class='chord-creator'>
+          <button onClick='onChordChange(this, 0)' class="note-btn note-btn-on" type='button'></button>
+          <button onClick='onChordChange(this, 1)' class="note-btn note-btn-off" type='button'></button>
+          <button onClick='onChordChange(this, 2)' class="note-btn note-btn-off" type='button'></button>
+          <button onClick='onChordChange(this, 3)' class="note-btn note-btn-on" type='button'></button>
+          <button onClick='onChordChange(this, 4)' class="note-btn note-btn-off" type='button'></button>
+          <button onClick='onChordChange(this, 5)' class="note-btn note-btn-on" type='button'></button>
+          <button onClick='onChordChange(this, 6)' class="note-btn note-btn-off" type='button'></button>
+          <button onClick='onChordChange(this, 7)' class="note-btn note-btn-off" type='button'></button>
+        </div>
       </form>
       <small>This works best in Chrome</small>
     </section>

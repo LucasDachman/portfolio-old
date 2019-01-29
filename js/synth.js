@@ -4,17 +4,15 @@ var playing = false;
 const playButton = document.getElementById('play');
 const tempoSlider = document.getElementById('tempo');
 const decaySlider = document.getElementsByName('decay')[0];
-const chordForm = document.getElementById('chord');
 const filterSlider = document.getElementById('filter');
+const noteButtons = document.getElementsByClassName('note-btn')
 
 const minDecay = 1.5;
 const maxDecay = 0.2;
 const minAttack = 0.005;
 const maxAttack = 0.3;
 
-const dm7 = ["F3", "A4", "C4", "D4"];
-const am7 = ["C4", "E3", "G4", "A4"];
-const asM7 = ["F3", "A4", "A#4", "D4"];
+const scale = ['D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C#5', 'D5'];
 
 Tone.Transport.bpm.value = tempoSlider.value;
 var chorus = new Tone.Chorus(4, 2.5, 0.5);
@@ -35,22 +33,13 @@ polySynth.set({
 polySynth.chain(filter, chorus, Tone.Master);
 
 var pattern = new Tone.Pattern(function (time, note) {
-  polySynth.triggerAttackRelease(note, "8n");
-}, dm7);
-
-chordForm.addEventListener('change', (e) => {
-  switch(e.target.value) {
-    case "dm7":
-      pattern.values = dm7;
-      break;
-    case "am7":
-      pattern.values = am7
-      break;
-    case "asM7":
-      pattern.values = asM7;
-      break;
-  }
-});
+  polySynth.triggerAttackRelease(note, "8n", time);
+  Tone.Draw.schedule(function(){
+    clearNoteButtons()
+    const button = document.getElementById(note);
+    button && button.classList.add('note-btn-playing')
+	}, time) //use AudioContext time of the event
+}, []);
 
 playButton.addEventListener('click', (e) => {
   if (playing) {
@@ -58,6 +47,7 @@ playButton.addEventListener('click', (e) => {
     playing = false;
     playButton.innerText = 'Play'
     playButton.className = 'btn btn-paused'
+    clearNoteButtons()
   } else {
     Tone.context.resume()
     .then(() => {
@@ -89,11 +79,40 @@ filterSlider.addEventListener('input', (e) => {
   filter.frequency.value = value;
 });
 
+function onChordChange(element, index) {
+  // toggle element style
+  if (element.classList.contains('note-btn-on')) {
+    element.className = 'note-btn note-btn-off'
+  } else {
+    element.className = 'note-btn note-btn-on'
+  }
+  // change chord array
+  setPattern();
+}
+
+const setPattern = () => {
+  let chord = scale.filter((_, index) => {
+    return noteButtons[index].classList.contains('note-btn-on');
+  })
+  pattern.values = chord;
+}
+
 const mapRange = function (val, in_min, in_max, out_min, out_max) {
   return (val - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-//start the part at the beginning of the Transport's timeline
+const clearNoteButtons = () => {
+  for(let i = 0; i < noteButtons.length; i++) {
+    noteButtons[i].classList.remove('note-btn-playing')
+  }
+}
+
+for(let i = 0; i < noteButtons.length; i++) {
+  noteButtons[i].id = scale[i];
+}
+
+setPattern();
 pattern.start(0)
 pattern.interval = "16n";
 pattern.humanize = false;
+
