@@ -1,17 +1,21 @@
 var Tone = window.Tone;
+const framerate = 60
 //  viz
 // const resolution = 1024;
-// const resolution = 256;
-const resolution = 512;
+// const resolution = 512;
+const resolution = 256;
+// const resolution = 128;
+// const resolution = 64;
+// const resolution = 16;
 const waveform = new Tone.Analyser('waveform', resolution);
-waveform.smoothing = 1;
+waveform.smoothing = 0.4;
 Tone.Master.connect(waveform);
 
 setInterval(() => {
     const value = waveform.getValue();
     viz.data.datasets[0].data = value;
     viz.update();
-}, 20);
+}, framerate);
 
 
 var data = {
@@ -20,22 +24,18 @@ var data = {
     label: "Amplitude",
     data: new Array(resolution).fill(0),
     fill: false,
-    backgroundColor: 'rgba(0,0,0,0)',
-    borderColor: 'rgb(51,51,51)',
+    borderColor: 'rgb(255,255,255)',
     pointRadius: 0,
-    // lineTension: 0.8,
   }]
 };
 
 const options = {
   maintainAspectRatio: false,
-  layout: {
-    padding: {
-      top: 10,
-      right: 10,
-      bottom: 10,
-      left: 40
-    }
+  animation: {
+    // easing: 'easeOutQuad',
+    easing: 'easeOutSine',
+    // duration: framerate + 400,
+    duration: 400,
   },
   legend: {
     display: false,
@@ -62,8 +62,8 @@ const options = {
       },
       ticks: {
         display: false,
-        min: -0.8,
-        max: 0.8
+        min: -1,
+        max: 1
       }
     }]
   }
