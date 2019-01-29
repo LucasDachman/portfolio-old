@@ -225,31 +225,34 @@ p {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
+  align-items: flex-end;
+  height: 40px;
 }
 
 .note-btn {
   text-decoration: none;
   outline: 0;
   border: none;
-  height: 40px;
   border-radius: 2px;
-  transition: background-color .2s;
+  transition: height .2s;
+  background-color: rgb(255, 255, 255);
 }
 
 .note-btn:hover {
-  background-color: var(--gray);
+  height: 100%
 }
 
 .note-btn-on {
-  background-color: rgb(255, 162, 0);
+  height: 100%
 }
 
 .note-btn-off {
   background-color: white;
+  height: 60%;
 }
 
 .note-btn-playing {
-  background-color: red;
+  background-color: rgb(255, 162, 0);
 }
 
 /* Viz */

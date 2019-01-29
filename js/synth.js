@@ -35,6 +35,7 @@ polySynth.chain(filter, chorus, Tone.Master);
 var pattern = new Tone.Pattern(function (time, note) {
   polySynth.triggerAttackRelease(note, "8n", time);
   Tone.Draw.schedule(function(){
+    clearNoteButtons()
     const button = document.getElementById(note);
     button && button.classList.add('note-btn-playing')
 	}, time) //use AudioContext time of the event
