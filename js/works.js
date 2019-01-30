@@ -28,8 +28,6 @@ const populateCards = () => {
     'https://creative.colorado.edu/~luda3983/web/projects/zen-garden/index.html'),
     cardTemplate(`A moving typographic sculpture.`, 
     './img/wakemake.png', 'https://lucasdachman.github.io/blog/typography/wake-make'),
-    cardTemplate(`Simple origami with LEDs.`, './img/Origami-Circuit.gif', 
-    'https://lucasdachman.github.io/blog/atlas-object/Origami-Circuit'),
   ];
 
   const worksGrid = document.getElementById('works-grid');
